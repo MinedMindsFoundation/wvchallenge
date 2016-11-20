@@ -1,0 +1,17 @@
+So far you have guessed: <%= letters_guessed %>.
+<br>
+There have been <%= incorrect_guesses %> incorrect guesses.
+<br>
+
+<% if incorrect_guesses > 0 %>
+	<img src=<%= image %> width="200">
+<% end %>
+<br>
+Player 2, what letter do you guess? 
+<br>
+<h1><%= hint %></h1>
+
+<form method="post" action="guess">
+	<input type="text" name="guess" maxlength="1" required>
+	<input type="submit">
+</form>
